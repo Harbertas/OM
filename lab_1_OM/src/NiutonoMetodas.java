@@ -1,4 +1,3 @@
-import java.lang.Math;
 
 public class NiutonoMetodas {
 
@@ -19,7 +18,7 @@ public class NiutonoMetodas {
 		return 2*x*(Math.pow(x, 2) - 5);
 	}
 
-	public static void main(String[] args) {
+	static void calculate() {
 		double x0 = 5.0; // Initial guess
 		double eps = 1e-4;
 

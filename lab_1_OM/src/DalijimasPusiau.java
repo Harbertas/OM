@@ -1,6 +1,5 @@
-import java.util.ArrayList;
 
-public class DalijimasPusiau  extends Main{
+public class DalijimasPusiau  extends Algoritmas{
 
 	// [l, r];
 	// L = r - l;
@@ -19,6 +18,11 @@ public class DalijimasPusiau  extends Main{
 		r = right;
 		L = r - l;
 		Xm = (l + r) / 2;
+	}
+
+	@Override
+	void whoAmI() {
+		System.out.println("Starting Interval division algorithm");
 	}
 
 	// Interval division by half method implementation
@@ -54,9 +58,4 @@ public class DalijimasPusiau  extends Main{
 		return (r + l) / 2;
 	}
 
-	public static void main(String[] args) {
-		DalijimasPusiau test = new DalijimasPusiau(0, 10);
-		test.calculate();
-		test.print();
-	}
 }

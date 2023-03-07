@@ -1,10 +1,15 @@
-public class AuksinisPjuvis extends Main{
+public class AuksinisPjuvis extends Algoritmas{
 
 	// Constructor
 	public AuksinisPjuvis(double left, double right) {
 		l = left ;
 		r = right;
 		L = r - l;
+	}
+
+	@Override
+	void whoAmI() {
+		System.out.println("Starting Golden cut algorithm");
 	}
 
 	public double goldenSectionSearch() {
@@ -38,11 +43,5 @@ public class AuksinisPjuvis extends Main{
 		xmin = (r + l) / 2;
 		// Return the minimum value of f(x) in the interval [a, b]
 		return (r + l) / 2;
-	}
-
-	public static void main(String[] args) {
-		AuksinisPjuvis test = new AuksinisPjuvis(0,10);
-		test.goldenSectionSearch();
-		test.print();
 	}
 }
