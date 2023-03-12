@@ -29,6 +29,7 @@ public class DalijimasPusiau  extends Algoritmas{
 	public double calculate() {
 		// Set the epsilon value
 		double eps = 1e-4;
+		double fxm = f(Xm);
 
 		while(L > eps) {
 			x1 = l + L/4;
@@ -37,14 +38,15 @@ public class DalijimasPusiau  extends Algoritmas{
 			x2arr.add(x2);
 			double f1 = f(x1);
 			double f2 = f(x2);
-			double fxm = f(Xm);
 			if(f1 < fxm) {
 				r = Xm;
 				Xm = x1;
+				fxm = f1;
 			}
 			else if(f2 < fxm) {
 				l = Xm;
 				Xm = x2;
+				fxm = f2;
 			}
 			else {
 				l = x1;

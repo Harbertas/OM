@@ -40,7 +40,7 @@ public class Algoritmas {
     public double f(double x) {
         countFunctionExecutions++;
         // Define the function to be minimized
-        return Math.pow((Math.pow(x, 2) - a), 2) / (b-1);
+        return (Math.pow((Math.pow(x, 2) - a), 2) / b) - 1;
     }
 
     public void print(){

@@ -22,20 +22,27 @@ public class AuksinisPjuvis extends Algoritmas{
 		// Calculate the initial values of x1, x2, and f(x1), f(x2)
 		x1 = r - phi*L;
 		x2 = l + phi*L;
+		double f1 = f(x1);
+		double f2 = f(x2);
 
 		while (L > eps) {
 			x1arr.add(x1);
 			x2arr.add(x2);
-			if (f(x2) < f(x1)) {
+			if (f2 < f1) {
 				l = x1;
 				L = r - l;
 				x1 = x2;
 				x2 = l + phi*L;
-			} else {
+				f1 = f2;
+				f2 = f(x2);
+			}
+			else {
 				r = x2;
 				L = r - l;
 				x2 = x1;
 				x1 = r - phi*L;
+				f2 = f1;
+				f1 = f(x1);
 			}
 			countWhileExecutions++;
 		}
